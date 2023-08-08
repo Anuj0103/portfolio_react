@@ -7,10 +7,10 @@ import {ContactType, ContactValue} from '../../../data/dataDef';
 import FacebookIcon from '../../Icon/FacebookIcon';
 import GithubIcon from '../../Icon/GithubIcon';
 import InstagramIcon from '../../Icon/InstagramIcon';
+import TwitterIcon from '../../Icon/LeetCodeIcon';
 import LinkedInIcon from '../../Icon/LinkedInIcon';
-import TwitterIcon from '../../Icon/TwitterIcon';
 import Section from '../../Layout/Section';
-import ContactForm from './ContactForm';
+// import ContactForm from './ContactForm';
 
 const ContactValueMap: Record<ContactType, ContactValue> = {
   [ContactType.Email]: {Icon: EnvelopeIcon, srLabel: 'Email'},
@@ -33,9 +33,9 @@ const Contact: FC = memo(() => {
           <h2 className="text-2xl font-bold text-white">{headerText}</h2>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div className="order-2 col-span-1 md:order-1 ">
+          {/* <div className="order-2 col-span-1 md:order-1 ">
             <ContactForm />
-          </div>
+          </div> */}
           <div className="order-1 col-span-1 flex flex-col gap-y-4 md:order-2">
             <p className="prose leading-6 text-neutral-300">{description}</p>
             <dl className="flex flex-col space-y-4 text-base text-neutral-500 sm:space-y-2">
@@ -51,7 +51,7 @@ const Contact: FC = memo(() => {
                           {'hover:text-white': href},
                         )}
                         href={href}
-                        target="_blank">
+                target="_blank">
                         <Icon aria-hidden="true" className="h-4 w-4 flex-shrink-0 text-neutral-100 sm:h-5 sm:w-5" />
                         <span className="ml-3 text-sm sm:text-base">{text}</span>
                       </a>

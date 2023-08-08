@@ -1,6 +1,5 @@
 import {
   AcademicCapIcon,
-  ArrowDownTrayIcon,
   BuildingOffice2Icon,
   CalendarIcon,
   FlagIcon,
@@ -9,24 +8,24 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
+// import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
+import LeetCodeIcon from '../components/Icon/LeetCodeIcon';
+// import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
+// import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
 import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
 import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
 import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
-import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
-import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
-import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
-import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
+// import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
+// import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
+// import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
+// import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/profilepic.jpg';
-import testimonialImage from '../images/testimonial.webp';
+// import testimonialImage from '../images/testimonial.webp';
 import {
   About,
   ContactSection,
@@ -36,7 +35,6 @@ import {
   PortfolioItem,
   SkillGroup,
   Social,
-  TestimonialSection,
   TimelineItem,
 } from './dataDef';
 
@@ -44,8 +42,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Portfolio',
+  description: "Portfolio site built with react resume template",
 };
 
 /**
@@ -69,27 +67,30 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Anuj Dhingra.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        <strong className="text-stone-100"></strong>
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        I am currently a Final Year Graduate in Computer Science Engineering from Maharaja Agrasen Institute of
+        Technology. Throughout my academic journey, I have developed a deep passion for giving back to the community,
+        and my goal is to integrate this passion into my engineering career.Through my personal portfolio, I aim to
+        showcase my journey as a student, engineer, and contributor to the open source community. I invite you to
+        explore my projects, experiences, and the impact I have made. Together, we can explore ways to make a positive
+        difference in the world through engineering and community-focused initiatives.
+        <br />
+        <br />
       </p>
     </>
   ),
   actions: [
     {
-      href: '/assets/resume.pdf',
+      href: 'https://drive.google.com/file/d/17_wlNH8Mg11ovy_Ay78aEc-6u_9jugMK/view?usp=drive_link',
       text: 'Resume',
       primary: true,
-      Icon: ArrowDownTrayIcon,
+      // Icon: ArrowDownTrayIcon,
     },
     {
       href: `#${SectionId.Contact}`,
@@ -104,16 +105,15 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  description:
+"Hello! I'm nuj Dhingra, a passionate Computer Science enthusiast based in Delhi, India. With a B.Tech in Computer Science & Engineering from Maharaja Agrasen Institute of Technology, I'm driven by the art of creating technology solutions. My skills span programming in languages like C++, Python, and Java, with a solid foundation in Data Structures, Algorithms, and Object-Oriented Programming.\n\nI find my thrill in blending technology with creativity, evident in my web development journey. As a Web Dev Intern at TWOWAITS, I optimized user interfaces using ReactJS, NodeJS, and HTML5, resulting in improved performance and user engagement.\n\nDiving into blockchain tech, I've explored Ethereum, Smart Contracts, and decentralized apps (DApps), contributing to projects that reshape digital transactions. My projects like Smart_Brain, using machine learning, and Covicure, a COVID Resource Exchange, highlight my versatility.\n\nAs a dedicated learner, adaptable collaborator, and problem solver, I've secured 2nd positions in notable hackathons and even published a research paper. Join me on this exciting journey of innovation and impact!\n\nThank you for visiting my portfolio.",
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'New Delhi', Icon: MapIcon},
+    {label: 'Age', text: '22', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Indian', Icon: FlagIcon},
+    {label: 'Interests', text: 'Swimming, Traveling, Cooking', Icon: SparklesIcon},
+    {label: 'Study', text: 'Maharaja Agrasen Institute Of Technology', Icon: AcademicCapIcon},
+    {label: 'Employment', text: 'Available for Intern/Full Time Roles', Icon: BuildingOffice2Icon},
   ],
 };
 
@@ -129,12 +129,29 @@ export const skills: SkillGroup[] = [
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'Hindi',
+        level: 10,
+      },
+    ],
+  },
+  {
+    name: 'Programming Languages',
+    skills: [
+      {
+        name: 'C++',
+        level: 8,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'C',
+        level: 7,
+      },
+      {
+        name: 'Java',
+        level: 7,
+      },
+      {
+        name: 'SQL',
+        level: 8,
       },
     ],
   },
@@ -142,16 +159,36 @@ export const skills: SkillGroup[] = [
     name: 'Frontend development',
     skills: [
       {
+        name: 'HTML',
+        level: 9,
+      },
+      {
+        name: 'CSS',
+        level: 8,
+      },
+      {
+        name: 'XML',
+        level: 6,
+      },
+      {
+        name: 'jQuery',
+        level: 8,
+      },
+      {
+        name: 'JavaScript',
+        level: 8,
+      },
+      {
         name: 'React',
         level: 9,
       },
       {
-        name: 'Typescript',
-        level: 7,
+        name: 'Redux',
+        level: 6,
       },
       {
-        name: 'GraphQL',
-        level: 6,
+        name: 'Material UI',
+        level: 7,
       },
     ],
   },
@@ -163,29 +200,25 @@ export const skills: SkillGroup[] = [
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
+        name: 'PostgreSQL',
+        level: 8,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Blockchain development',
     skills: [
       {
-        name: 'React Native',
-        level: 9,
+        name: 'Web3.js',
+        level: 5,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'Smart Contracts',
+        level: 7,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'Solidity',
+        level: 8,
       },
     ],
   },
@@ -196,70 +229,54 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'election_vote_dapp',
+    description: 'A decentralized voting application built using blockchain',
+    url: 'https://github.com/Anuj0103/election_vote_dapp',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'AI-NFT-GENERATOR-APP',
+    description: '',
+    url: 'https://github.com/Anuj0103/AI-NFT-GENERATOR-APP',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'todoListDapp',
+    description: 'A todo list app created with blockchain',
+    url: 'https://github.com/Anuj0103/todoListDapp',
     image: porfolioImage3,
   },
   {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'project_cryptoverse',
+    description: 'Crpytocurrency App powered by RapidAPI',
+    url: 'https://github.com/Anuj0103/project_cryptoverse',
     image: porfolioImage5,
   },
   {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'P2-facerecognitionbrain',
+    description: 'React project based on face recognition',
+    url: 'https://github.com/Anuj0103/P2-facerecognitionbrain',
     image: porfolioImage6,
   },
   {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    title: 'Covi-Cure',
+    description:
+      'Fully-Fledged and Completely Independent Website/Application that can be directly used by any Individual or any Organisation for the Betterment of the Society.',
+    url: 'https://github.com/Anuj0103/Covi-Cure',
     image: porfolioImage7,
   },
   {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage8,
+    title: 'P4-Tours-Project-React',
+    description: '',
+    url: 'https://github.com/Anuj0103/P4-Tours-Project-React',
+    image: porfolioImage7,
   },
   {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage11,
+    title: 'P5-Reviews-React',
+    description:
+      '',
+    url: 'https://github.com/Anuj0103/P5-Reviews-React',
+    image: porfolioImage7,
   },
 ];
 
@@ -268,39 +285,89 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2019-2023',
+    location: 'Maharaja Agrasen Institute Of Technology',
+    title: 'Computer Science Engineering',
+    content: (
+      <p>
+        <strong>Percentage: </strong>
+        86.867 %<br />
+        <strong>CGPA: </strong>
+        9.280
+      </p>
+    ),
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: '2019',
+    location: 'Bal Bharati Public School',
+    title: 'XII',
+    content: (
+      <p>
+        <strong>Percentage: </strong>
+        94.8 %
+      </p>
+    ),
+  },
+  {
+    date: '2017',
+    location: 'Bal Bharati Public School',
+    title: 'X',
+    content: (
+      <p>
+        <strong>CGPA: </strong>
+        10
+      </p>
+    ),
   },
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'June 2022 – Jul 2022',
+    location: 'TWOWAITS',
+    title: 'Web Development Intern',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        <ul style={{listStyleType: 'circle'}}>
+          <li>
+            Collaborated on the development of User Interface applications and highly scalable, transactional systems.
+          </li>
+          <li>
+            Leveraged my expertise in <strong>HTML5, CSS3, JavaScript, ReactJS, and NodeJS </strong>to create engaging
+            and dynamic web applications. Contributed to significant performance improvements, resulting in a{' '}
+            <strong>40% reduction in page load time </strong>and a{' '}
+            <strong>25% increase in overall application speed.</strong> Successfully integrated and utilized modern
+            technologies, enhancing the user experience and increasing customer engagement on the platform.
+          </li>
+          <li>
+            Contributed to scalable system development,{' '}
+            <strong>resulting in a 30% increase in monthly active users.</strong>
+          </li>
+        </ul>
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'Aug 2021 – Nov 2021',
+    location: 'ZYLICON HACKDEV TECHNOLOGIES',
+    title: 'React Developer Intern',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        <ul style ={{listStyleType: 'circle'}}>
+          <li>
+            {' '}
+            Worked on creating robust high-quality code. Code optimization for max performance across different
+            browsers, ensuring maximum efficiency. Involved designing in web pages using{' '}
+            <strong>HTML5, CSS3, React.js, Redux, Material UI Framework </strong>to design visually appealing web pages.{' '}
+          </li>
+          <li>
+            {' '}
+            Implemented stable React components and stand-alone functions for future scalability and integration. ·
+            <strong>Achieved a significant 30% increase in page loading speed,</strong> resulting in improved website
+            responsiveness and <strong>successfully reduced bounce rates by 20%, </strong>enhancing the overall user
+            experience.
+          </li>
+        </ul>
       </p>
     ),
   },
@@ -309,26 +376,26 @@ export const experience: TimelineItem[] = [
 /**
  * Testimonial section
  */
-export const testimonial: TestimonialSection = {
-  imageSrc: testimonialImage,
-  testimonials: [
-    {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
-    },
-    {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
-    },
-    {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
-    },
-  ],
-};
+// export const testimonial: TestimonialSection = {
+//   imageSrc: testimonialImage,
+//   testimonials: [
+//     {
+//       name: 'John Doe',
+//       text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
+//       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+//     },
+//     {
+//       name: 'Jane Doe',
+//       text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
+//       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+//     },
+//     {
+//       name: 'Someone else',
+//       text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
+//       image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+//     },
+//   ],
+// };
 
 /**
  * Contact section
@@ -336,27 +403,22 @@ export const testimonial: TestimonialSection = {
 
 export const contact: ContactSection = {
   headerText: 'Get in touch.',
-  description: 'Here is a good spot for a message to your readers to let them know how best to reach out to you.',
+  description: `I'm currently looking for summer internship opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me.`,
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'anujdhingra01@gmail.com',
+      href: 'mailto:anujdhingra01@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
-    },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
+      text: 'New Delhi, India',
+      // href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
     },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'Anuj0103',
+      href: 'https://github.com/Anuj-1-3',
     },
   ],
 };
@@ -365,9 +427,7 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/Anuj0103'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/anuj-dhingra01/'},
+  {label: 'Leetcode', Icon: LeetCodeIcon, href: 'https://leetcode.com/anujdhingra01/'},
 ];
